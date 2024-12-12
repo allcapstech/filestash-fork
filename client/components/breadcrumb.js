@@ -97,16 +97,12 @@ const BreadCrumbContainer = (props) => {
 };
 
 const Logout = (props) => {
-    const isRunningFromAnIframe = window.self !== window.top;
+    
     return (
         <div className="li component_logout">
-            {
-                isRunningFromAnIframe ? null : (
-                    <Link to="/logout">
-                        <Icon name="power"/>
-                    </Link>
-                )
-            }
+            <Link to="/logout">
+                <Icon name="power"/>
+            </Link>
         </div>
     );
 };
